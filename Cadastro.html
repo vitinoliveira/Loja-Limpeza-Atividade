@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<form>
+    <h1>Cadastro de Cliente</h1>
+ 
+    <div class="topfields">
+ 
+        <div class="field">
+            <label for="codigo">Código:</label>
+            <input type="text" id="codigo" value="AUTO" readonly>
+        </div>
+ 
+        <!-- CORREÇÃO 4: campo Nome adicionado -->
+        <div class="field">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Ex: João da Silva">
+        </div>
+ 
+        <!-- CORREÇÃO 3: value adicionado + opção Médio incluída -->
+        <div class="field">
+            <label>Status:</label>
+            <div class="status-options">
+                <label><input type="radio" name="status" value="bom"> Bom</label>
+                <label><input type="radio" name="status" value="medio"> Médio</label>
+                <label><input type="radio" name="status" value="ruim"> Ruim</label>
+            </div>
+        </div>
+ 
+        <!-- CORREÇÃO 1 e 2: </div class="field"> trocado por <div class="field"> correto -->
+        <div class="field">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" placeholder="Ex: Sobral">
+        </div>
+ 
+        <div class="field">
+            <label for="numero">Número:</label>
+            <input type="number" id="numero" min="0" placeholder="Ex: 28">
+        </div>
+ 
+        <div class="field">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" placeholder="Ex: Centro">
+        </div>
+ 
+        <div class="field">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" placeholder="Ex: 63000-000">
+        </div>
+ 
+        <div class="field">
+            <label for="uf">UF:</label>
+            <input type="text" id="uf" placeholder="Ex: CE">
+        </div>
+ 
+        <div class="field">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" placeholder="Ex: (88) 99999-9999">
+        </div>
+ 
+        <div class="field">
+            <label for="limite_credito">Limite de Crédito:</label>
+            <input type="number" id="limite_credito" placeholder="Ex: 1000.00">
+        </div>
+ 
+    </div>
+ 
+    <!-- CORREÇÃO 5: botões fora do topfields, no final do form -->
+    <div class="botoes">
+        <button type="submit">Salvar</button>
+        <button type="button" onclick="window.location.href='index.html'">Cancelar</button>
+    </div>
+ 
+</form>
+ 
+</body>
+</html>
