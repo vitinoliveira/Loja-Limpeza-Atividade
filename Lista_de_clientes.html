@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Clientes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div class="topo">
+    <h1>Lista de Clientes</h1>
+    <a href="cadastro_cliente.html">
+        <button type="button">Novo Cliente</button>
+    </a>
+</div>
+ 
+<table>
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Cidade</th>
+            <th>Telefone</th>
+            <th>Status</th>
+            <th>Limite de Crédito</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- linha de exemplo 1 -->
+        <tr>
+            <td>CLI-001</td>
+            <td>Ana de Sincrano</td>
+            <td>Sobral</td>
+            <td>(88) 99678-7756</td>
+            <td>Bom</td>
+            <td>R$ 5.000,00</td>
+            <td class="acoes">
+                <button type="button" onclick="window.location.href='cadastro_cliente.html'">Editar</button>
+                <button type="button" onclick="excluir(this)">Excluir</button>
+            </td>
+        </tr>
+        <!-- linha de exemplo 2 -->
+        <tr>
+            <td>CLI-002</td>
+            <td>João Beltrano</td>
+            <td>Fortaleza</td>
+            <td>(85) 99342-3453</td>
+            <td>Médio</td>
+            <td>R$ 2.000,00</td>
+            <td class="acoes">
+                <button type="button" onclick="window.location.href='cadastro_cliente.html'">Editar</button>
+                <button type="button" onclick="excluir(this)">Excluir</button>
+            </td>
+        </tr>
+        <!-- linha de exemplo 3 -->
+        <tr>
+            <td>CLI-003</td>
+            <td>Maria de Tal</td>
+            <td>Sobral</td>
+            <td>(88) 99426-4543</td>
+            <td>Bom</td>
+            <td>R$ 8.000,00</td>
+            <td class="acoes">
+                <button type="button" onclick="window.location.href='cadastro_cliente.html'">Editar</button>
+                <button type="button" onclick="excluir(this)">Excluir</button>
+            </td>
+        </tr>
+        <!-- linha de exemplo 4 -->
+        <tr>
+            <td>CLI-004</td>
+            <td>Francisco Fulano</td>
+            <td>Caucaia</td>
+            <td>(85) 98896-7856</td>
+            <td>Ruim</td>
+            <td>R$ 500,00</td>
+            <td class="acoes">
+                <button type="button" onclick="window.location.href='cadastro_cliente.html'">Editar</button>
+                <button type="button" onclick="excluir(this)">Excluir</button>
+            </td>
+        </tr>
+        <!-- linha de exemplo 5 -->
+        <tr>
+            <td>CLI-005</td>
+            <td>Carlos Souza</td>
+            <td>Sobral</td>
+            <td>(88) 99645-6446</td>
+            <td>Médio</td>
+            <td>R$ 3.500,00</td>
+            <td class="acoes">
+                <button type="button" onclick="window.location.href='cadastro_cliente.html'">Editar</button>
+                <button type="button" onclick="excluir(this)">Excluir</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+ 
+<script>
+    function excluir(botao) {
+        var confirmou = confirm("Deseja realmente excluir?");
+        if (confirmou) {
+            // remove a linha da tabela
+            var linha = botao.closest("tr");
+            linha.remove();
+            alert("Excluído com sucesso!");
+        }
+    }
+</script>
+ 
+</body>
+</html>
