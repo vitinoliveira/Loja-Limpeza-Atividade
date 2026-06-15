@@ -6,6 +6,12 @@
     <title>Cadastro de Cliente</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    function salvar() {
+        alert("Registro salvo com sucesso!");
+        window.location.href = "index.html";
+    }
+</script>
 <body>
  
 <form>
@@ -74,7 +80,7 @@
  
     <!-- CORREÇÃO 5: botões fora do topfields, no final do form -->
     <div class="botoes">
-        <button type="submit">Salvar</button>
+        <button type="button" onclick="salvar()">Salvar</button>
         <button type="button" onclick="window.location.href='index.html'">Cancelar</button>
     </div>
  
