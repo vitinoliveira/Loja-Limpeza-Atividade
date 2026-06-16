@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – LimpaFácil</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1565C0, #00897B);
+    }
+
+    .login-box {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.2);
+      padding: 48px 40px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-box .logo {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1565C0;
+      margin-bottom: 6px;
+    }
+
+    .login-box .logo span { color: #00897B; }
+
+    .login-box .descricao {
+      text-align: center;
+      color: #6B7280;
+      font-size: .9rem;
+      margin-bottom: 32px;
+    }
+
+    .login-box .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+
+    .login-box .field label {
+      font-size: .82rem;
+      font-weight: 600;
+      color: #6B7280;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+
+    .login-box .field input {
+      height: 46px;
+      border: 1.5px solid #E8ECF0;
+      border-radius: 8px;
+      padding: 0 14px;
+      font-size: .95rem;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .login-box .field input:focus {
+      border-color: #1E88E5;
+      box-shadow: 0 0 0 3px rgba(30,136,229,.15);
+    }
+
+    .login-box button {
+      width: 100%;
+      height: 46px;
+      background: #1565C0;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: opacity .2s;
+    }
+
+    .login-box button:hover { opacity: .88; }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <div class="logo">🧹 Limpa<span>Fácil</span></div>
+    <p class="descricao">Faça login para acessar o sistema</p>
+
+    <div class="field">
+      <label for="usuario">Usuário</label>
+      <input type="text" id="usuario" placeholder="Digite seu usuário">
+    </div>
+
+    <div class="field">
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" placeholder="Digite sua senha">
+    </div>
+
+    <button type="button" onclick="entrar()">Entrar</button>
+  </div>
+
+<script>
+  function entrar() {
+    var usuario = document.getElementById('usuario').value;
+    var senha = document.getElementById('senha').value;
+
+    if (usuario === 'admin' && senha === '123456') {
+      window.location.href = 'Lista_de_clientes.html';
+    } else {
+      alert('Usuário ou senha inválido!');
+    }
+  }
+</script>
+
+</body>
+</html>
